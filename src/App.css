@@ -51,6 +51,24 @@ p{
     align-items: center;
     width: 80%;
 }
+.location_section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+}
+.before-after_section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
 
+.changes_tooth{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+}
 
 

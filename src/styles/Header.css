@@ -73,3 +73,58 @@
 .header_nav_list li a:hover {
     color: #48aaf5;
 }
+
+.hamburger {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #0c7cd1;
+}
+
+/* Len na mobiloch */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+        margin-right: 20px;
+    }
+
+    .header_nav {
+        display: none;
+        position: absolute;
+        top: 15vh;
+        left: 0;
+        width: 100%;
+        background-color: white;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+        z-index: 1000;
+    }
+
+    .header_nav.active {
+        display: flex;
+    }
+
+    .header_nav_list {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .header_nav_list li a {
+        font-size: 5vw;
+        padding: 10px 20px;
+    }
+
+    .desktop_only {
+        display: none;
+    }
+
+    .mobile_only_button {
+        background-color: #0c7cd1;
+        color: white;
+        border-radius: 20px;
+        padding: 10px 20px;
+        font-weight: bold;
+        text-decoration: none;
+    }
+}
