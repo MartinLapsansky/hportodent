@@ -1,2 +1,7 @@
 #d6ecfd;
 #0c7cd1 - backround
+#d6ecfd
+#0c7cd1
+#48aaf6
+
+#74bff8

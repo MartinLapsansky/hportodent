@@ -40,7 +40,7 @@ const Footer: React.FC = () => {
                         <span className="day">{entry.day}</span>
                         <span className="time">
                             {entry.time}
-                            {entry.note && <span className="note"> – {entry.note}</span>}
+                            {entry.note && <span className="note">{entry.note}</span>}
                         </span>
                     </div>
                 ))}

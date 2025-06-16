@@ -2,35 +2,72 @@ import React, { useState } from "react";
 import logo from '../images/ortodentlogo.png'
 import '../styles/Header.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {faBars} from '@fortawesome/free-solid-svg-icons';
+import {faBars, faX} from '@fortawesome/free-solid-svg-icons';
+import {useLocation, useNavigate} from "react-router-dom";
+
+
 const Header: React.FC = () => {
+
+    const navigate = useNavigate();
+    const location = useLocation();
+
     const [menuOpen, setMenuOpen] = useState(false);
 
     const toggleMenu = () => {
         setMenuOpen(!menuOpen);
     };
 
+    const handleScrollToSection = (id: string) => {
+        if(id === 'rezervacia'){
+            navigate("/hportodent/rezervacia");
+        }
+        if (location.pathname !== "/hportodent") {
+            navigate("/hportodent", { replace: false });
+            setTimeout(() => {
+                const section = document.getElementById(id);
+                if (section) {
+                    section.scrollIntoView({ behavior: "smooth" });
+                }
+            }, 100);
+        } else {
+            const section = document.getElementById(id);
+            if (section) {
+                section.scrollIntoView({ behavior: "smooth" });
+            }
+        }
+
+        setMenuOpen(false);
+    };
+
     return (
-        <div className="header">
-            <div className="header_logo">
-                <img src={logo} alt="Logo" className="header_logo" />
+            <div className="header">
+                <div className="header_logo">
+                    <img src={logo} alt="Logo" className="header_logo" onClick={()=> navigate('/hportodent')} />
+                </div>
+
+                <div className="hamburger" onClick={toggleMenu}>
+                    {!menuOpen ? (
+                        <FontAwesomeIcon icon={faBars}></FontAwesomeIcon>
+                    ) : (
+                        <FontAwesomeIcon icon={faX}></FontAwesomeIcon>
+                    )
+                    }
+                </div>
+
+                <nav className={`header_nav ${menuOpen ? "active" : ""}`}>
+                    <ul className="header_nav_list">
+                        <li><a onClick={() => handleScrollToSection("domov")}>Domov</a></li>
+                        <li><a onClick={() => handleScrollToSection("o-nas")}>O nás</a></li>
+                        <li className="wide-item"><a onClick={() => handleScrollToSection("sluzby")}>Ponúkané služby</a></li>
+                        <li><a onClick={() => handleScrollToSection("premeny")}>Premeny</a></li>
+                        {menuOpen && (
+                            <li><a onClick={() => handleScrollToSection("kontakt")}>Rezervácia</a></li>
+                        )}
+                        <li><a onClick={() => handleScrollToSection("kontakt")}>Kontakt</a></li>
+                    </ul>
+                </nav>
+                <button className="reservation_button desktop_only" onClick={()=> handleScrollToSection("rezervacia")}>Rezervuj si termín</button>
             </div>
-
-            <div className="hamburger" onClick={toggleMenu}>
-                <FontAwesomeIcon icon={faBars}></FontAwesomeIcon>
-            </div>
-
-            <nav className={`header_nav ${menuOpen ? "active" : ""}`}>
-                <ul className="header_nav_list">
-                    <li><a href="#domov">Domov</a></li>
-                    <li className="wide-item"><a href="#sluzby">Ponúkané služby</a></li>
-                    <li><a href="#premeny">Galéria</a></li>
-                    <li><a href="#kontakt">Kontakt</a></li>
-                </ul>
-            </nav>
-
-            <button className="reservation_button desktop_only">Rezervuj si termín</button>
-        </div>
     )
 }
 

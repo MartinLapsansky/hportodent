@@ -6,6 +6,8 @@
     height: 15vh;
     border-bottom: 1px solid white;
     justify-content: space-between;
+    background-color: #d6ecfd;
+    padding-left: 10rem;
 }
 
 .header_logo{
@@ -14,6 +16,7 @@
     max-width: 200px;
     max-height: 200px;
     flex-grow: 1;
+    cursor: pointer;
 }
 
 .header_nav{
@@ -26,14 +29,15 @@
 .reservation_button{
     display: flex;
     flex-grow: 1;
-    max-width: 240px;
     white-space: nowrap;
-    font-size: 1rem;
+    font-size: 2rem;
     padding: 16px;
     background-color: #0c7cd1;
     font-weight: bold;
     justify-content: center;
     border-radius: 20px;
+    border: 3px solid black;
+    margin-right: 10rem;
 }
 
 .header_nav_list {
@@ -81,8 +85,11 @@
     color: #0c7cd1;
 }
 
-/* Len na mobiloch */
+/*mobiles*/
 @media (max-width: 768px) {
+    .header {
+        position: static;
+    }
     .hamburger {
         display: block;
         margin-right: 20px;
@@ -103,16 +110,28 @@
 
     .header_nav.active {
         display: flex;
+        background-color: #0c7cd1;;
+        width: 100%;
+        position: absolute;
     }
 
     .header_nav_list {
         flex-direction: column;
         gap: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .header_nav_list li:hover {
+        background-color: lightblue;
     }
 
     .header_nav_list li a {
         font-size: 5vw;
         padding: 10px 20px;
+    }
+    .header_nav_list li a:hover {
+        color: white;
     }
 
     .desktop_only {
@@ -127,4 +146,7 @@
         font-weight: bold;
         text-decoration: none;
     }
+
+
+
 }
