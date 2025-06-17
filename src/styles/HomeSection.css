@@ -27,7 +27,6 @@
 .content-block{
     display: flex;
     flex-direction: row;
-    max-height: 60vh;
 }
 
 .heading h1{
@@ -63,7 +62,6 @@
     justify-content: center;
     align-items: stretch;
     width: 100%;
-    height: 20vh;
     border: 1px solid #ccc;
     border-radius: 12px;
     overflow: hidden;
@@ -145,12 +143,10 @@
         flex-direction: column;
     }
     .heading-text{
-        width: 100%;
+        width: 80%;
     }
 
     .homepage_right {
-        width: 100%;
-        text-align: center;
         display: none;
     }
     .homepage_left {
@@ -171,5 +167,8 @@
 
     .info-box-content {
         justify-content: flex-start;
+    }
+    .heading h1{
+        font-size: 2.5rem;
     }
 }
