@@ -177,9 +177,6 @@
 
 
 @media (max-width: 768px) {
-    .reservation-container {
-        width: 80%;
-    }
     .reservation-heading{
         font-size: 2rem;
     }
@@ -193,13 +190,10 @@
     .email {
         grid-column: auto;
         grid-row: auto;
-    }
-    .service-container{
-        width: 80%;
+        width: 100%;
     }
     .service-full{
         flex-direction: column;
-        width: 80%;
     }
 }
 

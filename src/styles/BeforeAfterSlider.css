@@ -29,3 +29,9 @@
     transform: translateX(-50%);
     width: 80%;
 }
+
+@media (max-width: 768px) {
+    .slider-container{
+        max-width: 300px;
+    }
+}

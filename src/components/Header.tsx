@@ -33,6 +33,7 @@ const Header: React.FC = () => {
 
         if (id === 'rezervacia') {
             navigate("/hportodent/rezervacia");
+            setMenuOpen(false);
             return;
         }
 
@@ -72,7 +73,7 @@ const Header: React.FC = () => {
                         <li className="wide-item"><a onClick={() => handleScrollToSection("sluzby")}>Ponúkané služby</a></li>
                         <li><a onClick={() => handleScrollToSection("premeny")}>Premeny</a></li>
                         {menuOpen && (
-                            <li><a onClick={() => handleScrollToSection("kontakt")}>Rezervácia</a></li>
+                            <li><a onClick={() => handleScrollToSection("rezervacia")}>Rezervácia</a></li>
                         )}
                         <li><a onClick={() => handleScrollToSection("kontakt")}>Kontakt</a></li>
                     </ul>

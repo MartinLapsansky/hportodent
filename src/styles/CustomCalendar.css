@@ -5,6 +5,7 @@
     padding: 1rem;
     border-radius: 10px;
     overflow: hidden;
+    display: flex;
 }
 
 /* Overall calendar */
@@ -12,9 +13,7 @@
     background-color: #d6ecfd;
     border: none;
     font-family: sans-serif;
-    max-height: 20vh;
     box-sizing: border-box;
-    max-width: 30vw;
 }
 
 /* Navigation (month/year controls) */
@@ -76,9 +75,9 @@
 
 @media (max-width:768px) {
     .calendar-wrapper{
-        height: 40vh;
+        height: auto;
     }
     .react-calendar{
-        max-width: 50vw;
+        width: 100%;
     }
 }

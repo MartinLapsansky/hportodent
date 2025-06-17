@@ -1,7 +1,6 @@
 .footer {
     display: flex;
     justify-content: space-between;
-    padding: 2rem;
     background-color: white;
     border-radius: 25px;
     color: #0c7cd1;
@@ -115,5 +114,8 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+    }
+    .hours-section h3{
+        margin-bottom: 1rem;
     }
 }

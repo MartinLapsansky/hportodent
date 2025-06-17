@@ -115,5 +115,8 @@
     .about-content-text{
         max-width: 100%;
     }
+    .about-title{
+        font-size: 1.2rem;
+    }
 }
 

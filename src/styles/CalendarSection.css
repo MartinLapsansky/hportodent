@@ -5,10 +5,6 @@
     width: 100%;
 }
 
-.termins-right{
-    max-height: 20vh;
-    max-width: 20vw;
-}
 .calendar-left{
     display: flex;
     flex-direction: column;
@@ -28,4 +24,13 @@
     border-radius: 8px;
     background-color: #d6ecfd;
     cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .dentist-calendar-section{
+        flex-direction: column;
+    }
+    .calendar-left{
+        width: 100%;
+    }
 }
