@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import '../styles/ReservationPage.css'
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faArrowDown} from "@fortawesome/free-solid-svg-icons";
+import CalendarSection from "../components/CalendarSection.tsx";
 
 
 const ReservationPage: React.FC = () => {
@@ -91,15 +92,16 @@ const ReservationPage: React.FC = () => {
                     ))}
                   </div>
               )}
-
             </div>
         </div>
         <div className="description">
           <textarea className="description-input" placeholder="Poznámka..."/>
-
         </div>
         </div>
-
+        <div className="calendar-section">
+          <CalendarSection/>
+        </div>
+        <button className="reservation_button" type="submit" style={{margin:0}}>Odoslať rezerváciu</button>
       </div>
   );
 };

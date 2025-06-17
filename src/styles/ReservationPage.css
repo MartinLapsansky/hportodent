@@ -1,19 +1,35 @@
+/*whole page*/
 .reservation-page{
     display: flex;
     margin-bottom: 4rem;
     flex-direction: column;
     width: 100%;
     align-items: center;
+    justify-content: center;
 }
 
+.reservation-heading{
+    display: flex;
+    width: 50%;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    background-color: white;
+    border-radius: 15px;
+    padding: 30px;
+    border: 1px solid black;
+}
+
+/*heading and input fileds*/
 .reservation-container {
     display: flex;
-    width: 100%;
     flex-direction: column;
     margin-bottom: 5vh;
     align-items: center;
+    width: 100%;
 }
 
+/*type of service*/
 .service-container {
     display: flex;
     flex-direction: row;
@@ -26,12 +42,21 @@
     padding: 10px;
     border: 1px solid black;
 }
+
+.heading-service{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    font-size: 2rem;
+}
+
+/*description and services together*/
 .service-full{
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 3rem;
     width: 100%;
+    gap: 2rem;
 }
 
 .description{
@@ -51,24 +76,6 @@
     border: 2px solid #0c7cd1;
 }
 
-.reservation-heading{
-    display: flex;
-    width: 50%;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
-    background-color: white;
-    border-radius: 15px;
-    padding: 30px;
-    border: 1px solid black;
-}
-
-.heading-service{
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    font-size: 2rem;
-}
 
 .custom-dropdown{
     display: flex;
@@ -157,6 +164,11 @@
     grid-row-start: 2;
 }
 
+.calendar-section{
+    display: flex;
+    width: 100%;
+    margin-bottom: 2rem;
+}
 
 
 @media (max-width: 768px) {

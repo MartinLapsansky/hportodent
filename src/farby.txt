@@ -1,5 +1,5 @@
 #d6ecfd;
-#0c7cd1 - backround
+#0c7cd1
 #d6ecfd
 #0c7cd1
 #48aaf6

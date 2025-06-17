@@ -1,0 +1,75 @@
+/* Calendar wrapper */
+.calendar-wrapper {
+    height:22vh;
+    background-color: #d6ecfd;
+    padding: 1rem;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Overall calendar */
+.react-calendar {
+    background-color: #d6ecfd;
+    border: none;
+    font-family: sans-serif;
+    max-height: 20vh;
+    box-sizing: border-box;
+    max-width: 30vw;
+}
+
+/* Navigation (month/year controls) */
+.react-calendar__navigation {
+    background-color: #0c7cd1;
+    border-radius: 8px;
+    margin-bottom: 0.5rem;
+}
+
+.react-calendar__navigation button {
+    color: white;
+    font-weight: bold;
+    background: none;
+}
+
+.react-calendar__navigation button:hover {
+    background-color: #48aaf6;
+    border-radius: 4px;
+}
+
+/* Day tiles */
+.react-calendar__tile {
+    background-color: #d6ecfd;
+    border-radius: 6px;
+    padding: 0.75em 0.5em;
+    transition: background-color 0.2s ease;
+}
+
+.react-calendar__tile:hover {
+    background-color: #74bff8;
+}
+
+/* Active/selected day */
+.react-calendar__tile--active {
+    background-color: #0c7cd1 !important;
+    color: white;
+}
+
+/* Today highlight */
+.react-calendar__tile--now {
+    background-color: #48aaf6;
+    color: white;
+}
+
+/* Remove border for cleaner look */
+.react-calendar__month-view__days__day {
+    border: 2px solid #48aaf6 ;
+    color: black;
+    padding: 2px;
+}
+
+.custom-disabled {
+    background-color: #f0f0f0 !important;
+    color: #a0a0a0 !important;
+    cursor: not-allowed;
+    pointer-events: none;
+    opacity: 0.6;
+}
