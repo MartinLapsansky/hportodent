@@ -18,22 +18,33 @@ const Header: React.FC = () => {
     };
 
     const handleScrollToSection = (id: string) => {
-        if(id === 'rezervacia'){
+        const scrollToElement = () => {
+            const section = document.getElementById(id);
+            const header = document.querySelector('.header_section') as HTMLElement;
+
+            if (section && header) {
+                const headerHeight = header.offsetHeight;
+                const yOffset = -headerHeight;
+                const y = section.getBoundingClientRect().top + window.pageYOffset + yOffset;
+
+                window.scrollTo({ top: y, behavior: 'smooth' });
+            }
+        };
+
+        if (id === 'rezervacia') {
             navigate("/hportodent/rezervacia");
+            return;
         }
+
+        if (id === 'domov') {
+            navigate("/hportodent");
+        }
+
         if (location.pathname !== "/hportodent") {
             navigate("/hportodent", { replace: false });
-            setTimeout(() => {
-                const section = document.getElementById(id);
-                if (section) {
-                    section.scrollIntoView({ behavior: "smooth" });
-                }
-            }, 100);
+            setTimeout(scrollToElement, 100);
         } else {
-            const section = document.getElementById(id);
-            if (section) {
-                section.scrollIntoView({ behavior: "smooth" });
-            }
+            scrollToElement();
         }
 
         setMenuOpen(false);

@@ -1,6 +1,6 @@
 /* Calendar wrapper */
 .calendar-wrapper {
-    height:22vh;
+    height:30vh;
     background-color: #d6ecfd;
     padding: 1rem;
     border-radius: 10px;
@@ -72,4 +72,13 @@
     cursor: not-allowed;
     pointer-events: none;
     opacity: 0.6;
+}
+
+@media (max-width:768px) {
+    .calendar-wrapper{
+        height: 40vh;
+    }
+    .react-calendar{
+        max-width: 50vw;
+    }
 }

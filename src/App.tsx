@@ -21,7 +21,7 @@ function App() {
                         path="/hportodent"
                         element={
                             <>
-                                <div id="domov" className="home_section">
+                                <div id="domov">
                                     <HomeSection />
                                 </div>
                                 <div id="o-nas" className="about_section">

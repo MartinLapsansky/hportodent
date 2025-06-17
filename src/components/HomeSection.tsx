@@ -20,17 +20,17 @@ const HomeSection:React.FC = () => {
                         <p>Poskytujeme komplexnú starostlivosť o váš úsmev – od prevencie až po špecializovanú ortodontickú a stomatologickú liečbu.</p>
                     </div>
                     <div className="contact-info">
-                        <button className="info-box">
+                        <div className="info-box">
                             <div className="info-box-content">
                                 <FontAwesomeIcon className="info-icon" icon={faMapLocationDot}/>
-                                <div className="info-text">
+                                <div className="info-text address-box">
                                     <h2>Adresa</h2>
                                     <p>Školská ul.č.175/2</p>
                                     <p>Spišské Podhradie 053 04</p>
                                 </div>
                             </div>
-                        </button>
-                        <button className="info-box">
+                        </div>
+                        <div className="info-box">
                             <div className="info-box-content">
                                 <FontAwesomeIcon className="info-icon" icon={faPhone}/>
                                 <div className="info-text">
@@ -38,8 +38,8 @@ const HomeSection:React.FC = () => {
                                     <p>053 454 1345</p>
                                 </div>
                             </div>
-                        </button>
-                        <button className="info-box">
+                        </div>
+                        <div className="info-box">
                             <div className="info-box-content">
                                 <FontAwesomeIcon className="info-icon" icon={faEnvelope}/>
                                 <div className="info-text">
@@ -47,7 +47,7 @@ const HomeSection:React.FC = () => {
                                     <p>hportodent@azet.sk</p>
                                 </div>
                             </div>
-                        </button>
+                        </div>
 
                     </div>
                 </div>

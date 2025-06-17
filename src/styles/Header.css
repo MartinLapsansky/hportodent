@@ -7,7 +7,7 @@
     border-bottom: 1px solid white;
     justify-content: space-between;
     background-color: #d6ecfd;
-    padding-left: 10rem;
+    padding: 20px 30px 20px 30px ;
 }
 
 .header_logo{
@@ -37,7 +37,7 @@
     justify-content: center;
     border-radius: 20px;
     border: 3px solid black;
-    margin-right: 10rem;
+    margin-right: 1rem;
 }
 
 .header_nav_list {
