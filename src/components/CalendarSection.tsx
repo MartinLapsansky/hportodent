@@ -1,12 +1,18 @@
-import React, {useState} from 'react';
+import React from 'react';
 import Calendar, {type CalendarProps} from "react-calendar";
 import '../styles/CalendarSection.css'
 import '../styles/CustomCalendar.css';
 
 const AVAILABLE_HOURS = ['8:00', '9:00', '10:00', '11:00', '12:00', '13:00', '14:00'];
 
-const CalendarSection: React.FC = () => {
-    const [selectedDate, setSelectedDate] = useState<Date | null>(null);
+type CalendarSectionProps = {
+    selectedDate: Date | null,
+    setSelectedDate: React.Dispatch<React.SetStateAction<Date | null>>,
+    selectedTime: string | null,
+    setSelectedTime: React.Dispatch<React.SetStateAction<string | null>>
+}
+
+const CalendarSection: React.FC<CalendarSectionProps> = ({selectedTime,setSelectedDate,setSelectedTime,selectedDate}) => {
     const today = new Date();
 
     const handleDateChange: CalendarProps['onChange'] = (value) => {
@@ -56,7 +62,8 @@ const CalendarSection: React.FC = () => {
                         <div className='hours-grid'>
                             {
                                 AVAILABLE_HOURS.map((hour) => (
-                                    <div className="hour-slot" key={hour}>
+                                    <div className={`hour-slot ${selectedTime === hour ? 'selected' : '' }`} onClick={()=> setSelectedTime(hour)}
+                                         key={hour}>
                                         {hour}
                                     </div>
                                 ))

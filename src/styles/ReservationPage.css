@@ -10,7 +10,7 @@
 
 .reservation-heading{
     display: flex;
-    width: 80%;
+    width: auto;
     align-items: center;
     font-size: 30px;
     text-align: center;
@@ -173,6 +173,39 @@
     display: flex;
     width: 100%;
     margin-bottom: 2rem;
+}
+
+.input-error {
+    border: 1px solid red;
+}
+
+.input-valid {
+    border: 1px solid green;
+}
+
+.input-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.input-icon.error {
+    color: red;
+}
+
+.input-icon.valid {
+    color: green;
+}
+
+.input-with-icon {
+    position: relative;
+}
+
+.error-text {
+    color: red;
+    font-size: 12px;
+    margin-top: 4px;
 }
 
 

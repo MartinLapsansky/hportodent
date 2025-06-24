@@ -25,6 +25,13 @@
     background-color: #d6ecfd;
     cursor: pointer;
 }
+.hour-slot.selected{
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+    border: 3px solid red;
+
+}
 
 @media (max-width: 768px) {
     .dentist-calendar-section{

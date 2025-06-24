@@ -8,6 +8,7 @@ import LocationSection from "./components/LocationSection";
 import BeforeAfter from "./components/BeforeAfter.tsx";
 import './App.css'
 import ReservationPage from "./pages/ReservationPage.tsx";
+import ReservationSuccess from "./pages/ReservationSuccess.tsx";
 
 function App() {
     return (
@@ -46,6 +47,11 @@ function App() {
                     <Route path="/hportodent/rezervacia" element={
                         <div id="rezervacia" className="home_section">
                         <ReservationPage />
+                        </div>
+                    } />
+                    <Route path="/hportodent/rezervacia/success" element={
+                        <div id="rezervacia-success" className="home_section">
+                            <ReservationSuccess />
                         </div>
                     } />
                 </Routes>
