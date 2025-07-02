@@ -1,10 +1,10 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
-import HomeSection from "./components/HomeSection";
-import AboutSection from "./components/About";
-import Services from "./components/Services";
+import HomeSection from "./sections/HomeSection.tsx";
+import AboutSection from "./sections/About.tsx";
+import Services from "./sections/Services.tsx";
 import Footer from "./components/Footer";
-import LocationSection from "./components/LocationSection";
+import LocationSection from "./sections/LocationSection.tsx";
 import BeforeAfter from "./components/BeforeAfter.tsx";
 import './App.css'
 import ReservationPage from "./pages/ReservationPage.tsx";

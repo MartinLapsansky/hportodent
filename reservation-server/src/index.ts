@@ -22,5 +22,5 @@ mongoose.connect(process.env.MONGODB_URI !).then(() => {
 .catch(error => console.error("Chyba MongoDB Error: ", error));
 
 app.get("/", (req, res) => {
-    res.send("Server is running ✅");
+    res.send("Server is running");
 });

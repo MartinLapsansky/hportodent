@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import '../styles/ReservationPage.css'
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faArrowDown} from "@fortawesome/free-solid-svg-icons";
-import CalendarSection from "../components/CalendarSection.tsx";
+import CalendarSection from "../sections/CalendarSection.tsx";
 import { faCheck, faExclamationCircle } from "@fortawesome/free-solid-svg-icons";
 import {useNavigate} from "react-router-dom";
 
