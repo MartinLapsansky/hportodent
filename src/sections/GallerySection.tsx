@@ -5,7 +5,7 @@ import Mouth from "../images/mouth.png"
 
 const GallerySection: React.FC = () => {
   return (
-      <section className="gallery-section">
+      <section className="flex w-full flex-col h-full m-auto justify-center items-center">
           <h1 className="about-title">Galéria</h1>
           <ImageCarousel images={[chairDentist,Mouth]}/>
       </section>

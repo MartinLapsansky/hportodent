@@ -7,7 +7,7 @@
     border-bottom: 1px solid white;
     justify-content: space-between;
     background-color: #d6ecfd;
-    padding: 20px 30px 20px 30px ;
+    padding: 20px 30px 20px 30px;
 }
 
 .header_logo{
@@ -101,7 +101,7 @@
 
     .header_nav.active {
         display: flex;
-        background-color: #0c7cd1;;
+        background-color: #0c7cd1;
         width: 80%;
         position: absolute;
         border-radius: 15px;

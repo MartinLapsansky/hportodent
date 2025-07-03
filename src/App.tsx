@@ -9,6 +9,7 @@ import BeforeAfter from "./components/BeforeAfter.tsx";
 import './App.css'
 import ReservationPage from "./pages/ReservationPage.tsx";
 import ReservationSuccess from "./pages/ReservationSuccess.tsx";
+import GallerySection from "./sections/GallerySection.tsx";
 
 function App() {
     return (
@@ -37,6 +38,9 @@ function App() {
                                 <div id="kontakt" className="location_section">
                                     <LocationSection/>
                                 </div>
+                                <div id="galeria" className="home_section">
+                                    <GallerySection/>
+                                </div>
                             </>
                         }
                     />
@@ -44,6 +48,7 @@ function App() {
                     <Route path="/hportodent/sluzby" element={<Services />} />
                     <Route path="/hportodent/premeny" element={<BeforeAfter/>} />
                     <Route path="/hportodent/kontakt" element={<LocationSection />} />
+                    <Route path="/hportodent/galeria" element={<GallerySection />} />
                     <Route path="/hportodent/rezervacia" element={
                         <div id="rezervacia" className="home_section">
                         <ReservationPage />
