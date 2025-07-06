@@ -30,11 +30,11 @@ const HomeSection:React.FC = () => {
             <div className="content-block">
                 <div className="heading-text">
                     <div className="heading">
-                        <h1>Ambulancia
+                        <h1 className="font-sans font-bold">Ambulancia
                             komplexnej <span>čeľustnoortopedickej</span> <br/> a <span> stomatologickej</span> starostlivosti.
                         </h1>
                     </div>
-                    <div className="heading-sub">
+                    <div className="heading-sub text-black mt-3 italic font-serif">
                         <p>Poskytujeme komplexnú starostlivosť o váš úsmev – od prevencie až po špecializovanú ortodontickú a stomatologickú liečbu.</p>
                     </div>
                     <div className="contact-info">

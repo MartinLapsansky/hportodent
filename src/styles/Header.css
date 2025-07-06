@@ -25,10 +25,6 @@
     flex-grow: 2;
     align-items: center;
     justify-content: center;
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.5s ease, transform 0.5s ease;
-    pointer-events: none;
 }
 .reservation_button{
     display: flex;
@@ -99,21 +95,25 @@
     }
 
     .header_nav {
-        display: none;
+        transform: scaleY(0);
+        transform-origin: top;
+        transition: transform 0.4s ease-out, opacity 0.4s ease-out;
+        opacity: 0;
+        display: flex;
+        position: absolute;
     }
 
     .header_nav.active {
         display: flex;
+        transform: scaleY(1);
+        opacity: 1;
         background-color: #0c7cd1;
         width: 80%;
         position: absolute;
         border-radius: 15px;
         padding: 25px;
         margin-top: 75vh;
-
-        opacity: 1;
-        transform: translateY(0);
-        pointer-events: auto;
+        flex-direction: column;
     }
 
     .header_nav_list {
@@ -148,4 +148,15 @@
         text-decoration: none;
     }
 
+}
+
+@keyframes rollIn {
+    0% {
+        transform: translateY(-100%) rotate(-15deg);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
 }
