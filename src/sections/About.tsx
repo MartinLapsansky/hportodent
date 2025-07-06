@@ -20,12 +20,12 @@ const AboutSection = () => {
                 O nás
             </h2>
 
-            <div className="flex justify-center flex-row gap-10 max-w-[90%] text-left justify-between mt-5 mb-5 flex-wrap">
+            <div className="flex justify-center flex-row gap-10 max-w-[90%] text-left mt-5 mb-5 flex-wrap">
 
                 {/* Text - slide from left */}
                 <div
                     ref={textRef}
-                    className={`flex flex-1 max-w-[50%] flex-col justify-center items-center transition-all duration-1000 ease-out transform ${
+                    className={`flex max-w-[50%] flex-col justify-center items-center transition-all duration-1000 ease-out transform ${
                         textInView ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-16"
                     }`}
                 >
@@ -40,8 +40,8 @@ const AboutSection = () => {
                         </p>
                     </div>
 
-                    <div className="w-80 md:full mt-5">
-                        <img src={mouthImage} alt="mouth" className="w-full rounded-[20px]" />
+                    <div className="w-80 md:w-full mt-5">
+                        <img src={mouthImage} alt="mouth" className="rounded-[20px] w-full" />
                     </div>
                 </div>
 

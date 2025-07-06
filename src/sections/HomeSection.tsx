@@ -25,7 +25,7 @@ const HomeSection:React.FC = () => {
 
 
     return(
-        <section ref={ref} className={`flex flex-col md:row flex-wrap w-[100%] md:w-[85%] p-0 md:p-6 mx-auto my-0 transition-all duration-1000 ease-out transform ${
+        <section ref={ref} className={`flex flex-col items-center md:row flex-wrap w-[100%] md:w-[85%] p-0 md:p-6 mx-auto my-0 transition-all duration-1000 ease-out transform ${
             inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
             <div className="content-block">
                 <div className="heading-text">

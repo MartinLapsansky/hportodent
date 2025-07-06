@@ -11,6 +11,7 @@ import ReservationPage from "./pages/ReservationPage.tsx";
 import ReservationSuccess from "./pages/ReservationSuccess.tsx";
 import GallerySection from "./sections/GallerySection.tsx";
 import ScrollToTop from "./components/ScrollToTop.tsx";
+import SubFooter from "./components/SubFooter.tsx";
 
 function App() {
     return (
@@ -64,6 +65,9 @@ function App() {
                 </Routes>
                 <div className="services_section">
                     <Footer/>
+                </div>
+                <div className="w-full rounded-3xl">
+                    <SubFooter/>
                 </div>
             </div>
         </Router>

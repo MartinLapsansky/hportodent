@@ -199,7 +199,7 @@ const ReservationPage: React.FC = () => {
         </div>
       </div>
 
-        <div className={`flex flex-row md:column items-center w-full gap-4 transition-all duration-2000 ease-out transform ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
+        <div className={`flex flex-col md:row items-center w-full gap-4 transition-all duration-2000 ease-out transform ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
         <div className="service-container">
           <h2 className="heading-service">Vyber službu:</h2>
             <div className="custom-dropdown">

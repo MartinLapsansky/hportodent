@@ -4,6 +4,7 @@ import {faTooth, faTeeth, faSmile, faXRay, faUserMd, faStethoscope,faCheckCircle
 import type {IconDefinition} from "@fortawesome/fontawesome-svg-core";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {useInView} from "react-intersection-observer";
+import Modal from "../components/Modal.tsx";
 
 
 type Service = {
@@ -97,19 +98,7 @@ const Services = () => {
             </div>
 
             {activeService && (
-                <div className="modal-overlay" onClick={() => setActiveService(null)}>
-                    <div
-                        className="modal-content"
-                        onClick={(e) => e.stopPropagation()}
-                    >
-                        <button className="modal-close" onClick={() => setActiveService(null)}>
-                            &times;
-                        </button>
-                        <FontAwesomeIcon icon={activeService.icon} />
-                        <h2>{activeService.name}</h2>
-                        <p>{activeService.description}</p>
-                    </div>
-                </div>
+                <Modal service={activeService} onClose={() => setActiveService(null)} />
             )}
         </div>
     );
