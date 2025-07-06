@@ -39,7 +39,7 @@ const CalendarSection: React.FC<CalendarSectionProps> = ({selectedTime,setSelect
       <div className="dentist-calendar-section">
         {/* Left Side - Calendar */}
         <div className="calendar-left">
-          <h2>Vyberte dátum návštevy</h2>
+          <h2>Vyberte dátum návštevy:</h2>
           <div className="calendar-wrapper">
             <Calendar
                 onChange={handleDateChange}

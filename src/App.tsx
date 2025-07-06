@@ -10,10 +10,12 @@ import './App.css'
 import ReservationPage from "./pages/ReservationPage.tsx";
 import ReservationSuccess from "./pages/ReservationSuccess.tsx";
 import GallerySection from "./sections/GallerySection.tsx";
+import ScrollToTop from "./components/ScrollToTop.tsx";
 
 function App() {
     return (
         <Router>
+            <ScrollToTop/>
             <div className="main_container">
                 <div className="header_section">
                     <Header />

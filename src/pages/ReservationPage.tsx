@@ -5,11 +5,12 @@ import {faArrowDown} from "@fortawesome/free-solid-svg-icons";
 import CalendarSection from "../sections/CalendarSection.tsx";
 import { faCheck, faExclamationCircle } from "@fortawesome/free-solid-svg-icons";
 import {useNavigate} from "react-router-dom";
+import {useInView} from "react-intersection-observer";
 
 function parseDateToShortFormat(date: Date): string {
 
   const day = date.getDate();
-  const month = date.getMonth() + 1; // getMonth() vracia 0-11, preto +1
+  const month = date.getMonth() + 1;
   const year = date.getFullYear();
 
   return `${day}.${month}.${year}`;
@@ -17,6 +18,11 @@ function parseDateToShortFormat(date: Date): string {
 
 
 const ReservationPage: React.FC = () => {
+
+  const {inView,ref} = useInView({
+      threshold: 0.1,
+      triggerOnce: true,
+  });
 
 
   const [showDropdown, setShowDropdown] = useState(false);
@@ -97,10 +103,16 @@ const ReservationPage: React.FC = () => {
       console.error("Chyba pri odosielani",error);
     }
   }
-
+// .reservation-container {
+//     display: flex;
+//     flex-direction: column;
+//     margin-bottom: 5vh;
+//     align-items: center;
+//     width: 100%;
+//   }
   return (
-      <div className="reservation-page">
-      <div className="reservation-container">
+      <section className="reservation-page">
+      <div ref={ref} className={`flex flex-col mb-10 items-center w-full transition-all duration-2000 ease-out transform ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
         <h1 className="heading-text reservation-heading">Navštív nás, kedy to tebe najviac vyhovuje!</h1>
         <div className="user-info">
           <div className="first-name">
@@ -186,7 +198,8 @@ const ReservationPage: React.FC = () => {
         </div>
         </div>
       </div>
-        <div className="service-full">
+
+        <div className={`flex flex-row md:column items-center w-full gap-4 transition-all duration-2000 ease-out transform ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
         <div className="service-container">
           <h2 className="heading-service">Vyber službu:</h2>
             <div className="custom-dropdown">
@@ -232,8 +245,8 @@ const ReservationPage: React.FC = () => {
           )
           }
         </div>
-        <button className="reservation_button" type="submit" onClick={handleSubmitReservation} style={{margin:0}}>Odoslať rezerváciu</button>
-      </div>
+        <button className="reservation_button white-bg" type="submit" onClick={handleSubmitReservation} style={{margin:0}}>Odoslať rezerváciu</button>
+      </section>
   );
 };
 

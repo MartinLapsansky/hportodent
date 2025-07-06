@@ -22,14 +22,7 @@
     border: 1px solid black;
 }
 
-/*heading and input fileds*/
-.reservation-container {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 5vh;
-    align-items: center;
-    width: 100%;
-}
+
 
 /*type of service*/
 .service-container {
@@ -53,13 +46,7 @@
 }
 
 /*description and services together*/
-.service-full{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    width: 100%;
-    gap: 2rem;
-}
+
 
 .description{
     display: flex;
@@ -133,6 +120,7 @@
     column-gap: 2rem;
     width: 90%;
     justify-items: center;
+    margin-top: 30px;
 }
 
 .user-info input{
@@ -174,6 +162,7 @@
     display: flex;
     width: 100%;
     margin-bottom: 2rem;
+    margin-top: 2rem;
 }
 
 .input-error {

@@ -25,6 +25,7 @@
     "react-animated-burgers": "^1.2.8",
     "react-calendar": "^6.0.0",
     "react-dom": "^19.1.0",
+    "react-intersection-observer": "^9.16.0",
     "react-router-dom": "^7.6.2"
   },
   "devDependencies": {
